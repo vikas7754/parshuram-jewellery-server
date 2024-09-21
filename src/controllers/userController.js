@@ -218,6 +218,9 @@ const uploadSingleImage = async (req, res) => {
       return res.status(500).json({ message: err.message || "Server error." });
     }
     const file = req.file;
+    if (!file) {
+      return res.status(400).json({ message: "Image is required!" });
+    }
     try {
       const result = await uploadImage(file);
       return res.status(200).json(result);
