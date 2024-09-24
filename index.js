@@ -39,6 +39,7 @@ app.use("/api/delta", require("./src/routes/deltaRoute"));
 app.use("/api/update", require("./src/routes/updateRoute"));
 app.use("/api/user", require("./src/routes/userRoute"));
 app.use("/api/enquiry", require("./src/routes/enquiryRoute"));
+app.use("/api/product", require("./src/routes/productRoute"));
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
